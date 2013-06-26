@@ -44,7 +44,7 @@ class member_approval_admin {
 		}
 		?>
 		<div class="wrap">
-			<div id="icon-plugins" class="icon32"><br></div><h2>Member Approval</h2>
+			<div id="icon-options-general" class="icon32"><br></div><h2>Member Approval</h2>
 			<div style="clear: both;"></div>
 				<div id="member-approval-general-settings" class="member-approval-main-section">
 					<form method="post" action="">
@@ -105,5 +105,18 @@ class member_approval_admin {
 				</div>
 		</div>
 		<?php
+	}
+
+	/**
+	 * Adds the Settings link to the admin menu
+	 *
+	 * @param $links string
+	 *
+	 * @return string
+	 */
+	public static function settings_link($links) {
+		$settings_link = '<a href="options-general.php?page=member-approval">Settings</a>';
+		array_unshift($links, $settings_link);
+		return $links;
 	}
 }
