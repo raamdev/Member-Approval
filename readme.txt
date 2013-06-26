@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: brucecaldwell
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=6ZPC8JXLBNAMU&lc=US&item_name=Donation%20to%20the%20development%20of%20Member%20Approval&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: comments, spam
+Tags: members, approval, s2member, secure
 Requires at least: 3.2
 Tested up to: 3.5.3
 Stable tag: 130625
