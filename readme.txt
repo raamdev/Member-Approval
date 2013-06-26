@@ -56,3 +56,8 @@ Currently the only part of the plugin that displays text on the frontend of your
 
 = 130635 =
 * First release of the plugin. Let me know if there are any issues with it!
+
+== Upgrade Notice ==
+
+= 130625 =
+* First Release
