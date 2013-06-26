@@ -8,10 +8,16 @@ if(!defined('ABSPATH'))
  * Admin-side "stuff"
  */
 class member_approval_admin {
+	/**
+	 * Sets up the Options Page on the `admin_menu` hook
+	 */
 	public static function setup() {
 		add_options_page('Member Approval Settings', 'Member Approval', 'manage_options', 'member-approval', array('member_approval_admin', 'page'));
 	}
 
+	/**
+	 * Controls Options Page content
+	 */
 	public static function page() {
 		if(!current_user_can('manage_options'))
 			wp_die(__('You do not have sufficient permissions to access this page.'));
@@ -113,6 +119,8 @@ class member_approval_admin {
 	 * @param $links string
 	 *
 	 * @return string
+	 *
+	 * Originally found here: http://bavotasan.com/2009/a-settings-link-for-your-wordpress-plugins/
 	 */
 	public static function settings_link($links) {
 		$settings_link = '<a href="options-general.php?page=member-approval">Settings</a>';

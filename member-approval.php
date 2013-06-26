@@ -24,6 +24,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 if(!defined('ABSPATH'))
 	exit('Don\'t access source files directly!');
 
@@ -31,6 +32,10 @@ define('MEMBER_APPROVAL_ROOT', dirname(__FILE__)); // Root directory for include
 
 /**
  * @param $c string Class's name
+ *
+ * "Autoloader"
+ *
+ * @TODO: If (in the future) there are more class files created, make this a real autoloader
  */
 function member_approval_autoload($c) {
 	if($c === 'member_approval_admin') {
@@ -44,4 +49,4 @@ function member_approval_autoload($c) {
 	}
 }
 
-require_once(MEMBER_APPROVAL_ROOT . '/includes/php/hooks.php');
+require_once(MEMBER_APPROVAL_ROOT . '/includes/php/hooks.php'); // Hooks file

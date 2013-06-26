@@ -3,7 +3,15 @@
 if(!defined('ABSPATH'))
 	exit('Don\'t access source files directly!');
 
+/**
+ * Class member_approval_user_edits
+ *
+ * For the ability to Approve members through the Edit User panel.
+ */
 class member_approval_user_edits {
+	/**
+	 * @param $user WP_User A WP_User Object passed from WordPress
+	 */
 	public static function add_field($user) {
 		$user_needs_approval = get_user_meta($user->ID, 'requires_approval', TRUE);
 
@@ -26,6 +34,9 @@ class member_approval_user_edits {
 		}
 	}
 
+	/**
+	 * @param $user_id int The User's ID, as passed from the `edit_user_profile_update` action hook
+	 */
 	public static function save_field($user_id) {
 		if (!current_user_can('edit_user', $user_id))
 			return;
